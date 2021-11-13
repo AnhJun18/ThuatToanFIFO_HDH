@@ -47,9 +47,9 @@ void resetMH(unsigned short int **mapID){
 		setfillstyle(1,MAU_KHUNG);
 		bar(560,80,1010,380);
 		rectangle(560,80,1010,380);
-		EditText(1,220,75,380,105,mapID,BLUE,WHITE);
-		EditText(2,220,125,380,155,mapID,BLUE,WHITE);
-		EditText(3,220,175,380,205,mapID,BLUE,WHITE);
+		EditText(ID_NAME,220,75,380,105,mapID,BLUE,WHITE);
+		EditText(ID_TIMERL,220,125,380,155,mapID,BLUE,WHITE);
+		EditText(ID_TIMECPU,220,175,380,205,mapID,BLUE,WHITE);
 		setfillstyle(1,MAU_BG);	
 		bar(0,410,WD_WIDTH,WD_HEIGHT);		
     
@@ -67,10 +67,10 @@ void veKhungNhapXuat( unsigned short int **mapID){
     outtextxy(100, 80,"TenTienTrinh");
     outtextxy(100, 130,"ThoiDiemVaoRL");
     outtextxy(100, 180,"ThoiGianXuLy");
-    EditText(1, 220, 75, 380, 105, mapID, BLUE, WHITE);
-    EditText(2, 220, 125, 380, 155, mapID, BLUE, WHITE);
-    EditText(3, 220, 175, 380, 205, mapID, BLUE, WHITE);
-    Button(4, 220, 240, 310, 280, mapID, BLUE, BLACK, GRAY, "THEM");
+    EditText(ID_NAME , 220, 75, 380, 105, mapID, BLUE, WHITE);
+    EditText(ID_TIMERL, 220, 125, 380, 155, mapID, BLUE, WHITE);
+    EditText(ID_TIMECPU, 220, 175, 380, 205, mapID, BLUE, WHITE);
+    Button(ID_ADD, 220, 240, 310, 280, mapID, BLUE, BLACK, GRAY, "THEM");
 }
 
 void veKhungDS(unsigned short int **mapID){

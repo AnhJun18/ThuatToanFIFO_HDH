@@ -9,8 +9,6 @@
 
 #define BLACK 0
 #define BLUE 1
-#define LIGHTGREEN 3
-#define RED 4
 #define GRAY 7
 #define DARKGRAY 8
 #define LIGHTBLUE 9
@@ -18,6 +16,14 @@
 #define LIGHTRED 12
 #define WHITE 15
 
+
+#define ID_NAME    1
+#define ID_TIMERL  2
+#define ID_TIMECPU 3
+#define ID_ADD     4
+#define ID_SUBMIT  5
+#define ID_RESET   6
+#define ID_ABOUT   7
 
 
 

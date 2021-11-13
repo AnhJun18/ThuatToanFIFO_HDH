@@ -3,9 +3,9 @@
 
 struct TienTrinh{
 	char name[10];
-	float TG_den_RL, TG_XuLy;
-    float timeIN, timeOUT;
-	float timewait; 
+	float timeDenRL, timeXuLy;
+    float timeIn, timeOut;
+	float timeWait; 
 };
 
 struct DSTienTrinh{
@@ -37,30 +37,26 @@ bool isDSFull(DSTienTrinh &dstt){
 
 void resetTienTrinh(TienTrinh &tt){
 			tt.name[0] = '\0';	
-			tt.TG_den_RL = 0;
-			tt.TG_XuLy = 0;	
-			tt.timeIN = 0;
-			tt.timeOUT = 0;
-			tt.timewait = 0;
+			tt.timeDenRL = 0;
+			tt.timeXuLy = 0;	
+			tt.timeIn = 0;
+			tt.timeOut = 0;
+			tt.timeWait = 0;
 	
 }
 
-bool checktt(TienTrinh &tt){
+bool isProcessValid(TienTrinh &tt){
 	
 	if(strlen(tt.name) == 0)  {
 	    MessageBox(NULL,"Ten Tien Trinh Khong Duoc De Trong","THONG BAO",MB_ICONWARNING|MB_OK);
 		 return false;
 	}
-	if(tt.TG_XuLy == 0) {
+	if(tt.timeXuLy == 0) {
 		 MessageBox(NULL,"Thoi Gian Su Dung CPU Khong Duoc De Trong","THONG BAO",MB_ICONWARNING|MB_OK);
 		 return false;
 	}
 	return true;
 }
 void delete_ds(DSTienTrinh &dstt){
-	for(int i=0;i<MAXTIENTRINH;i++){
-		if(dstt.data[i] == NULL)
-	      return;
-		delete dstt.data[i];
-	}
+	dstt.soluong = 0;	
 }
